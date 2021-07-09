@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Chest;
 import org.bukkit.entity.Player;
@@ -14,12 +15,12 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+import me.Penguin.permissions.seperms;
 import net.milkbowl.vault.economy.Economy;
 import penguin.sellwands.Main;
 import penguin.sellwands.objects.Config;
 import penguin.sellwands.objects.SellWand;
 import penguin.sellwands.utils.m;
-import penguin.sellwands.utils.seperms;
 
 public class eventclickwand implements Listener{
 	
@@ -33,6 +34,7 @@ public class eventclickwand implements Listener{
 	@EventHandler
 	public void sellInteract(PlayerInteractEvent e) {
 		Player p = e.getPlayer();
+		Location loc = e.getClickedBlock().getLocation();
 		if (SellWand.isSellWand(p.getInventory().getItemInMainHand())) {
 			ItemStack item = p.getInventory().getItemInMainHand();
 			SellWand wand = new SellWand(item);
@@ -40,6 +42,7 @@ public class eventclickwand implements Listener{
 				e.setCancelled(true);
 				Chest c = (Chest) e.getClickedBlock().getState();
 				if (seperms.canBuild(p, c.getLocation())) {
+					if (seperms.getCoreProtect() != null) seperms.getCoreProtect().logContainerTransaction(p.getName() + ": Sellwand", loc);
 					if (item.getAmount() == 1) {
 						Inventory chest = c.getInventory();
 						HashMap<Material, Double> map = Config.getSellables();
@@ -57,11 +60,11 @@ public class eventclickwand implements Listener{
 							}
 						}
 						if (items > 0) {
-						Economy eco = Main.getPlugin().eco;			
-						for (ItemStack i : toremove) chest.remove(i); 
-						eco.depositPlayer(p, total);
-						item = wand.takeUse();
-						p.getInventory().setItemInMainHand(item);						
+							Economy eco = Main.getPlugin().eco;			
+							for (ItemStack i : toremove) chest.remove(i); 
+							eco.depositPlayer(p, total);
+							item = wand.takeUse();
+							p.getInventory().setItemInMainHand(item);						
 						p.sendMessage(m.moneyreceived(p, total, items));
 						if (item.getType() == Material.AIR) p.sendMessage(m.sellwandbroke());
 						} else p.sendMessage(m.noItemsToSell());
