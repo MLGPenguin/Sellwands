@@ -60,7 +60,6 @@ public class eventclickwand implements Listener{
 						Economy eco = Main.getPlugin().eco;			
 						for (ItemStack i : toremove) chest.remove(i); 
 						eco.depositPlayer(p, total);
-						//item = wand.isInfinite() ? wand.getItem() : wand.takeUse();
 						item = wand.takeUse();
 						p.getInventory().setItemInMainHand(item);						
 						p.sendMessage(m.moneyreceived(p, total, items));
