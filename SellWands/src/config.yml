@@ -1,0 +1,6 @@
+PluginPrefix: '&8[&5Sell&6Wands&8] '
+wandItem: "BLAZE_ROD"
+wandName: "&bSell Wand"
+wandLore:
+- "&aThis SellWand has %uses% uses left!"
+glowing: false

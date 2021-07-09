@@ -1,0 +1,28 @@
+--- 
+author: PenguinMan
+description: "SellWands!"
+main: penguin.sellwands.Main
+name: SellWands
+version: 1.1.5
+depend: []
+api-version: 1.16
+
+commands:
+
+  sellwand: 
+    usage: /<command> []
+    description: "All SellWand Commands"
+    aliases: [sw]
+
+
+
+permissions: 
+   
+  sellwands.give:
+    default: op
+    description: Give a user a sellwand.
+    
+  sellwands.reload:
+    default: op
+    description: reloads sell wand plugin.
+    

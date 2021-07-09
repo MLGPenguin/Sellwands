@@ -1,0 +1,27 @@
+#All Players
+unknownCommand: "&cUnknown Command"
+multiWanding: "&cYou can only use one sell wand at a time"
+noSellHere: "&cYou can't use that here"
+noItemsToSell: "&cThere are no sellable items in this chest"
+sellwandbroke: "&cYour SellWand broke"
+receivedmoney: "&aYou have sold &c%items% &aitems for &c$%money%&a!"
+receivedWand: "&aYou have received a SellWand with &6%uses% &auses!"
+noPermission: "&cYou do not have permission to do this"
+
+#Staff-Only (It Is Recommended you do not change these)
+invalidPlayerSelf: "&cYou must be a player"
+invalidPlayerOther: "&cUnrecognised Player '%player%'"
+fullinventory: "&cYour inventory is full!"
+fullInvOther: "&c%p%'s Inventory is full"
+invalidplayer: "&cThat is not a valid player!"
+error: "&cThere is an error in the configuraion..."
+givenWand: "&aYou have given &6%p% &aa sellwand with &6%uses% &auses."
+reloaded: "&aReloaded all files"
+setworth: "&aSet the worth of %item% to $%price%"
+notANumber: "&cInvalid number %number%"
+removedItem: "&aRemoved %item% from the list"
+itemNotInConfig: "&c%item% does not have a worth"
+notAnItem: "&cThis is not a valid item"
+noItemsOnTheList: "&cThere are currently no sellable items"
+invalidUses: "&cWand can not have %uses% uses"
+
