@@ -13,5 +13,7 @@
 	<classpathentry kind="lib" path="C:/Users/baww1/Desktop/JUNII/plugins/necessity plugins (all servers)/FastAsyncWorldEdit-Bukkit-1.17-44.jar"/>
 	<classpathentry kind="lib" path="C:/Users/baww1/Desktop/JUNII/plugins/necessity plugins (all servers)/CoreProtect-19.5.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/APermissionUtil"/>
+	<classpathentry kind="lib" path="C:/Users/baww1/Desktop/JUNII/plugins/sbZen/ShopGUIPlus-1.62.2.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/aShopGuiPlusHook"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

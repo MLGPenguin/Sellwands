@@ -1,7 +1,6 @@
 package penguin.sellwands.events;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import org.bukkit.Bukkit;
@@ -18,9 +17,9 @@ import org.bukkit.inventory.ItemStack;
 import me.Penguin.permissions.seperms;
 import net.milkbowl.vault.economy.Economy;
 import penguin.sellwands.Main;
-import penguin.sellwands.objects.Config;
 import penguin.sellwands.objects.SellWand;
 import penguin.sellwands.utils.m;
+import penguin.sellwands.utils.sellables;
 
 public class eventclickwand implements Listener{
 	
@@ -45,17 +44,15 @@ public class eventclickwand implements Listener{
 					if (seperms.getCoreProtect() != null) seperms.getCoreProtect().logContainerTransaction(p.getName() + ": Sellwand", loc);
 					if (item.getAmount() == 1) {
 						Inventory chest = c.getInventory();
-						HashMap<Material, Double> map = Config.getSellables();
 						List<ItemStack> toremove = new ArrayList<>();
 						int items = 0;
 						double total = 0;
 						for (ItemStack i : chest.getContents()) {
 							if (i == null) continue;
-							if (map.keySet().contains(i.getType())) {
-								int amount = i.getAmount();
-								Material type = i.getType();
-								items += amount;
-								total += (amount * map.get(type));
+							Material type = i.getType();
+							if (sellables.CanSell(type)) {
+								items += i.getAmount();
+								total += (sellables.getPrice(i));
 								toremove.add(i);
 							}
 						}

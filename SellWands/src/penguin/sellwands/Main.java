@@ -17,6 +17,8 @@ import penguin.sellwands.utils.u;
 
 public class Main extends JavaPlugin {
 	
+	//requires Global Shop Hook & Permission util
+	
 	public Economy eco;
 	
 	public static Main getPlugin() { return Main.getPlugin(Main.class); }
