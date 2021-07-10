@@ -41,7 +41,7 @@ public class eventclickwand implements Listener{
 				e.setCancelled(true);
 				Chest c = (Chest) e.getClickedBlock().getState();
 				if (seperms.canBuild(p, c.getLocation())) {
-					if (seperms.getCoreProtect() != null) seperms.getCoreProtect().logContainerTransaction(p.getName() + ": Sellwand", loc);
+					if (seperms.getCoreProtect() != null) seperms.getCoreProtect().logContainerTransaction(p.getName() + " (Sellwand)", loc);
 					if (item.getAmount() == 1) {
 						Inventory chest = c.getInventory();
 						List<ItemStack> toremove = new ArrayList<>();
