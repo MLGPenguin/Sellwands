@@ -10,8 +10,8 @@
 	<classpathentry kind="lib" path="C:/Users/baww1/Desktop/JAR THINGS/plugins/PLUGINS/1.16.1/Vault.jar"/>
 	<classpathentry kind="lib" path="C:/Users/baww1/Desktop/JUNII/plugins/survival/plugin b.u 19.01.21/GriefPrevention.jar"/>
 	<classpathentry kind="lib" path="C:/Users/baww1/Desktop/JUNII/plugins/necessity plugins (all servers)/worldguard-bukkit-7.0.5-dist.jar"/>
-	<classpathentry kind="lib" path="C:/Users/baww1/Desktop/JUNII/plugins/necessity plugins (all servers)/FastAsyncWorldEdit-Bukkit-1.17-44.jar"/>
-	<classpathentry kind="lib" path="C:/Users/baww1/Desktop/JUNII/plugins/necessity plugins (all servers)/CoreProtect-19.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/baww1/Desktop/JUNII/plugins/necessity plugins (all servers)/FastAsyncWorldEdit-Bukkit-1.17-102.jar"/>
+	<classpathentry kind="lib" path="C:/Users/baww1/Desktop/JUNII/plugins/necessity plugins (all servers)/CoreProtect-20.0.jar"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/APermissionUtil"/>
 	<classpathentry kind="lib" path="C:/Users/baww1/Desktop/JUNII/plugins/sbZen/ShopGUIPlus-1.62.2.jar"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/aShopGuiPlusHook"/>
