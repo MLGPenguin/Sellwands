@@ -12,7 +12,6 @@ import org.bukkit.inventory.ItemStack;
 import penguin.sellwands.Main;
 import penguin.sellwands.files.messages;
 import penguin.sellwands.files.sellableitems;
-import penguin.sellwands.gui.sellwandlistgui;
 import penguin.sellwands.objects.Config;
 import penguin.sellwands.objects.SellWand;
 import penguin.sellwands.utils.m;
@@ -36,13 +35,7 @@ public class sellwand implements CommandExecutor{
 
 		if (args.length == 1) {
 			String arg = args[0];
-			if (arg.equalsIgnoreCase("gui")) {
-				if (sender instanceof Player) {
-					Player p = (Player) sender;
-					sellwandlistgui itemlist = new sellwandlistgui();
-					itemlist.Ilist(p);	
-				} else sender.sendMessage(m.invalidPlayerSelf());
-			} else if (arg.equalsIgnoreCase("removeworth")) {		
+			if (arg.equalsIgnoreCase("removeworth")) {		
 				if (u.isPlayer(sender)) {
 					Player p = (Player) sender;
 					ItemStack item = p.getInventory().getItemInMainHand();
