@@ -68,7 +68,7 @@ public class sellwand implements CommandExecutor{
 						if (u.hasInventorySpace(target)) {
 							ItemStack wanditem = wand.getItem();
 							target.getInventory().addItem(wanditem);
-							target.sendMessage(m.receivedWand(wand.getUses(), wand.isInfinite()));
+						//	target.sendMessage(m.receivedWand(wand.getUses(), wand.isInfinite()));
 							if (sender instanceof Player && target != (Player) sender) sender.sendMessage(m.givenWand(target, wand.getUses(), wand.isInfinite()));
 							return true;
 						} else sender.sendMessage(m.fullInvOther(target));
