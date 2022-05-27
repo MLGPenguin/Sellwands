@@ -20,9 +20,11 @@ import penguin.sellwands.Main;
 import penguin.sellwands.objects.SellWand;
 import penguin.sellwands.utils.m;
 import penguin.sellwands.utils.sellables;
+import penguin.sellwands.utils.u;
 
 public class eventclickwand implements Listener{
 
+	@SuppressWarnings("unused")
 	private Main plugin;
 
 	public eventclickwand(Main plugin) {
@@ -42,7 +44,7 @@ public class eventclickwand implements Listener{
 					e.setCancelled(true);
 					Chest c = (Chest) e.getClickedBlock().getState();
 					if (seperms.canBuild(p, c.getLocation())) {
-						if (seperms.getCoreProtect() != null) seperms.getCoreProtect().logContainerTransaction(p.getName() + " &6(Sellwand)", loc);
+						if (seperms.getCoreProtect() != null) seperms.getCoreProtect().logContainerTransaction(p.getName() + u.cc(" &6(Sellwand)"), loc);
 						if (item.getAmount() == 1) {
 							Inventory chest = c.getInventory();
 							List<ItemStack> toremove = new ArrayList<>();
